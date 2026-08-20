@@ -1,0 +1,955 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f5;
+    color: #111;
+    line-height: 1.6;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+
+    --black: #111111;
+    --white: #ffffff;
+    --gray: #777777;
+    --light-gray: #e8e8e5;
+    --background: #f7f7f5;
+
+    --max-width: 1200px;
+
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 5%;
+
+    position: sticky;
+    top: 0;
+
+    background: rgba(247, 247, 245, 0.95);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 100;
+
+    border-bottom: 1px solid var(--light-gray);
+
+}
+
+
+.logo {
+
+    font-size: 20px;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+.logo span {
+
+    font-weight: 400;
+
+}
+
+
+.navbar nav {
+
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+    font-size: 14px;
+
+}
+
+
+.navbar nav a {
+
+    transition: opacity 0.2s ease;
+
+}
+
+
+.navbar nav a:hover {
+
+    opacity: 0.55;
+
+}
+
+
+.nav-button {
+
+    background: var(--black);
+    color: var(--white);
+
+    padding: 11px 18px;
+
+    border-radius: 30px;
+
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.section {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 120px 5%;
+
+}
+
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin-bottom: 60px;
+
+}
+
+
+.eyebrow {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-heading h2,
+.trial-content h2,
+.custom-section h2,
+.final-cta h2 {
+
+    font-size: clamp(40px, 5vw, 72px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.section-heading p {
+
+    color: var(--gray);
+
+    font-size: 18px;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 24px;
+
+    border-radius: 40px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+
+}
+
+
+.button.primary {
+
+    background: var(--black);
+
+    color: var(--white);
+
+}
+
+
+.button.primary:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.85;
+
+}
+
+
+.button.secondary {
+
+    border: 1px solid var(--black);
+
+}
+
+
+.button.secondary:hover {
+
+    background: var(--black);
+
+    color: var(--white);
+
+}
+
+
+.button.large {
+
+    padding: 18px 32px;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 85vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 80px 5%;
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+}
+
+
+.hero-content {
+
+    max-width: 900px;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(60px, 9vw, 130px);
+
+    line-height: 0.9;
+
+    letter-spacing: -7px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: #888;
+
+}
+
+
+.hero-description {
+
+    max-width: 600px;
+
+    font-size: 20px;
+
+    color: var(--gray);
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.portfolio-item {
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+}
+
+
+.placeholder {
+
+    width: 100%;
+    height: 100%;
+
+    background: #dededb;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #999;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.center-button {
+
+    text-align: center;
+
+    margin-top: 45px;
+
+}
+
+
+/* =========================
+   TRIAL
+========================= */
+
+.trial-section {
+
+    background: var(--black);
+
+    color: var(--white);
+
+    padding: 120px 5%;
+
+}
+
+
+.trial-content {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.trial-content p {
+
+    font-size: 19px;
+
+    color: #bdbdbd;
+
+    max-width: 700px;
+
+}
+
+
+.trial-price {
+
+    font-size: 64px;
+
+    font-weight: 700;
+
+    letter-spacing: -3px;
+
+    margin: 40px 0;
+
+}
+
+
+.trial-content ul {
+
+    list-style: none;
+
+    margin-bottom: 40px;
+
+}
+
+
+.trial-content li {
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #333;
+
+}
+
+
+.trial-content li::before {
+
+    content: "✓";
+
+    margin-right: 12px;
+
+}
+
+
+/* =========================
+   PACKS
+========================= */
+
+.packs-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.pack-card {
+
+    background: var(--white);
+
+    border: 1px solid var(--light-gray);
+
+    padding: 35px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+.pack-card.featured {
+
+    border: 2px solid var(--black);
+
+}
+
+
+.pack-number {
+
+    font-size: 12px !important;
+
+    color: var(--gray);
+
+    margin-bottom: 25px;
+
+}
+
+
+.pack-card h3 {
+
+    font-size: 32px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.pack-description {
+
+    color: var(--gray);
+
+    font-size: 15px;
+
+    min-height: 100px;
+
+}
+
+
+.pack-price {
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    margin-top: 25px;
+
+    letter-spacing: -2px;
+
+}
+
+
+.pack-label {
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.featured-label {
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    font-size: 10px;
+
+    padding: 8px 12px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.details-button {
+
+    width: 100%;
+
+    background: none;
+
+    border: none;
+
+    border-top: 1px solid var(--light-gray);
+
+    padding: 18px 0;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+
+.pack-details {
+
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition: grid-template-rows 0.3s ease;
+
+    overflow: hidden;
+
+}
+
+
+.pack-details > div {
+
+    min-height: 0;
+
+}
+
+
+.pack-details.open {
+
+    grid-template-rows: 1fr;
+
+    padding-top: 20px;
+
+}
+
+
+.pack-details h4 {
+
+    margin-bottom: 10px;
+
+    margin-top: 15px;
+
+}
+
+
+.pack-details ul {
+
+    list-style: none;
+
+}
+
+
+.pack-details li {
+
+    font-size: 14px;
+
+    padding: 6px 0;
+
+    color: var(--gray);
+
+}
+
+
+.pack-details li::before {
+
+    content: "— ";
+
+}
+
+
+/* =========================
+   CUSTOM
+========================= */
+
+.custom-section {
+
+    background: #e9e9e5;
+
+    padding: 120px 5%;
+
+}
+
+
+.custom-section > div {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+}
+
+
+.custom-section p {
+
+    max-width: 650px;
+
+    color: var(--gray);
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================
+   LOGISTICS
+========================= */
+
+.logistics-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.logistics-grid strong {
+
+    font-size: 13px;
+
+    color: var(--gray);
+
+}
+
+
+.logistics-grid h3 {
+
+    margin: 15px 0;
+
+    font-size: 20px;
+
+}
+
+
+.logistics-grid p {
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+}
+
+
+.location-note {
+
+    margin-top: 70px;
+
+    border-top: 1px solid var(--light-gray);
+
+    padding-top: 40px;
+
+    max-width: 700px;
+
+}
+
+
+.location-note h3 {
+
+    margin-bottom: 15px;
+
+}
+
+
+.location-note p {
+
+    color: var(--gray);
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta {
+
+    padding: 160px 5%;
+
+    text-align: center;
+
+    background: var(--black);
+
+    color: var(--white);
+
+}
+
+
+.final-cta p {
+
+    color: #aaa;
+
+    max-width: 600px;
+
+    margin: 0 auto 35px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 40px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid var(--light-gray);
+
+    font-size: 13px;
+
+}
+
+
+footer p {
+
+    color: var(--gray);
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .navbar nav a:not(.nav-button) {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        min-height: 75vh;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: clamp(55px, 16vw, 90px);
+
+        letter-spacing: -5px;
+
+    }
+
+
+    .portfolio-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .packs-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .logistics-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .section {
+
+        padding: 80px 5%;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .navbar {
+
+        padding: 18px 5%;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 17px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .button {
+
+        width: 100%;
+
+    }
+
+
+    .portfolio-grid {
+
+        gap: 8px;
+
+    }
+
+
+    .logistics-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+
+    }
+
+}

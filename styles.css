@@ -244,6 +244,36 @@ button {
 
 }
 
+/* =========================
+   BOTONES SOBRE FONDO NEGRO
+========================= */
+
+.button-light {
+
+    background: #ffffff;
+
+    color: #111111;
+
+    border: 2px solid #ffffff;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+}
+
+
+.button-light:hover {
+
+    background: #eeeeee;
+
+    color: #111111;
+
+    border-color: #eeeeee;
+
+    transform: translateY(-2px);
+
+}
 
 .button.secondary {
 

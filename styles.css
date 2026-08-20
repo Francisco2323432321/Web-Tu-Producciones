@@ -210,9 +210,13 @@ button {
 
     border-radius: 40px;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    font-weight: 600;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
 
     transition: all 0.2s ease;
 
@@ -614,27 +618,27 @@ button {
 
 .pack-details {
 
-    display: grid;
+    max-height: 0;
 
-    grid-template-rows: 0fr;
-
-    transition: grid-template-rows 0.3s ease;
+    opacity: 0;
 
     overflow: hidden;
 
-}
+    transition:
+        max-height 0.45s ease,
+        opacity 0.25s ease,
+        padding 0.45s ease;
 
-
-.pack-details > div {
-
-    min-height: 0;
+    padding-top: 0;
 
 }
 
 
 .pack-details.open {
 
-    grid-template-rows: 1fr;
+    max-height: 1000px;
+
+    opacity: 1;
 
     padding-top: 20px;
 

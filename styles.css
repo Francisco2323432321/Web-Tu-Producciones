@@ -130,6 +130,10 @@ button {
 
     border-radius: 30px;
 
+    font-weight: 800;
+
+    text-transform: uppercase;
+
 }
 
 
@@ -228,24 +232,6 @@ button {
     background: var(--black);
 
     color: var(--white);
-}
-   
-.trial-section .button.primary {
-
-    background: var(--white);
-
-    color: var(--black);
-
-    border: 2px solid var(--white);
-
-}
-.trial-section .button.primary:hover {
-
-    background: transparent;
-
-    color: var(--white);
-
-    border-color: var(--white);
 
 }
 
@@ -263,6 +249,10 @@ button {
 
     border: 1px solid var(--black);
 
+    font-weight: 800;
+
+    text-transform: uppercase;
+
 }
 
 
@@ -274,6 +264,44 @@ button {
 
 }
 
+
+/* =========================
+   BOTÓN DE PRUEBA
+========================= */
+
+.trial-section .button.primary {
+
+    background: #ffffff !important;
+
+    color: #111111 !important;
+
+    border: 2px solid #ffffff !important;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+}
+
+
+.trial-section .button.primary:hover {
+
+    background: #eeeeee !important;
+
+    color: #111111 !important;
+
+    border-color: #eeeeee !important;
+
+    opacity: 1;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================
+   BOTÓN GRANDE
+========================= */
 
 .button.large {
 
@@ -640,6 +668,8 @@ button {
     align-items: center;
 
 }
+
+
 .details-button span:last-child {
 
     font-size: 20px;
@@ -649,6 +679,7 @@ button {
     line-height: 1;
 
 }
+
 
 .pack-details {
 

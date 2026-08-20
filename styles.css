@@ -228,6 +228,24 @@ button {
     background: var(--black);
 
     color: var(--white);
+}
+   
+.trial-section .button.primary {
+
+    background: var(--white);
+
+    color: var(--black);
+
+    border: 2px solid var(--white);
+
+}
+.trial-section .button.primary:hover {
+
+    background: transparent;
+
+    color: var(--white);
+
+    border-color: var(--white);
 
 }
 
@@ -607,14 +625,30 @@ button {
 
     cursor: pointer;
 
-    font-weight: 600;
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.7px;
+
+    text-transform: uppercase;
 
     display: flex;
 
     justify-content: space-between;
 
-}
+    align-items: center;
 
+}
+.details-button span:last-child {
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+}
 
 .pack-details {
 

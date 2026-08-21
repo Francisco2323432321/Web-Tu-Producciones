@@ -91,6 +91,7 @@ a {
 .navbar nav a {
     transition: opacity 0.2s ease;
     font-weight: 800;
+    text-transform: none;
 }
 
 .navbar nav a:hover {
@@ -103,7 +104,7 @@ a {
     padding: 11px 18px;
     border-radius: 30px;
     font-weight: 800;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 

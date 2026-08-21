@@ -91,7 +91,6 @@ a {
 .navbar nav a {
     transition: opacity 0.2s ease;
     font-weight: 800;
-    text-transform: uppercase;
 }
 
 .navbar nav a:hover {

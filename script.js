@@ -1,51 +1,21 @@
 function toggleDetails(button) {
-
-    const allDetails = document.querySelectorAll(".pack-details");
-    const allButtons = document.querySelectorAll(".details-button");
-
     const clickedCard = button.closest(".pack-card");
     const clickedDetails = clickedCard.querySelector(".pack-details");
 
+    const text = button.querySelector(".details-text");
+    const icon = button.querySelector("span:last-child");
+
     const shouldOpen = !clickedDetails.classList.contains("open");
 
-    allDetails.forEach((details) => {
+    clickedDetails.classList.toggle("open", shouldOpen);
 
-        if (shouldOpen) {
-            details.classList.add("open");
-        } else {
-            details.classList.remove("open");
-        }
+    if (text) {
+        text.textContent = shouldOpen
+            ? "OCULTAR DETALLES"
+            : "VER QUÉ INCLUYE";
+    }
 
-    });
-
-
-    allButtons.forEach((button) => {
-
-        const text = button.querySelector(".details-text");
-        const icon = button.querySelector("span");
-
-        if (shouldOpen) {
-
-            if (text) {
-                text.textContent = "OCULTAR DETALLES";
-            }
-
-            if (icon) {
-                icon.textContent = "−";
-            }
-
-        } else {
-
-            if (text) {
-                text.textContent = "VER QUÉ INCLUYE";
-            }
-
-            if (icon) {
-                icon.textContent = "+";
-            }
-
-        }
-
-    });
-
+    if (icon) {
+        icon.textContent = shouldOpen ? "−" : "+";
+    }
 }

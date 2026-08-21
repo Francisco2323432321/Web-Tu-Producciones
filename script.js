@@ -1,13 +1,18 @@
 function toggleDetails(button) {
-    const clickedCard = button.closest(".pack-card");
-    const clickedDetails = clickedCard.querySelector(".pack-details");
+    const card = button.closest(".pack-card");
 
+    if (!card) return;
+
+    const details = card.querySelector(".pack-details");
     const text = button.querySelector(".details-text");
     const icon = button.querySelector("span:last-child");
 
-    const shouldOpen = !clickedDetails.classList.contains("open");
+    if (!details) return;
 
-    clickedDetails.classList.toggle("open", shouldOpen);
+    const shouldOpen = !details.classList.contains("open");
+
+    details.classList.toggle("open", shouldOpen);
+    button.setAttribute("aria-expanded", String(shouldOpen));
 
     if (text) {
         text.textContent = shouldOpen

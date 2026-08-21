@@ -16,9 +16,7 @@
 
 <body>
 
-    <!-- =========================
-         NAVEGACIÓN
-    ========================== -->
+    <!-- NAVEGACIÓN -->
 
     <header class="navbar">
 
@@ -26,7 +24,7 @@
             TU<span>producciones</span>
         </a>
 
-        <nav>
+        <nav aria-label="Navegación principal">
             <a href="#portfolio">PORTFOLIO</a>
             <a href="#packs">PACKS</a>
             <a href="#prueba">PRODUCCIÓN DE PRUEBA</a>
@@ -41,9 +39,7 @@
 
     <main>
 
-        <!-- =========================
-             HERO
-        ========================== -->
+        <!-- HERO -->
 
         <section class="hero">
 
@@ -80,9 +76,7 @@
         </section>
 
 
-        <!-- =========================
-             PORTFOLIO
-        ========================== -->
+        <!-- PORTFOLIO -->
 
         <section id="portfolio" class="section portfolio-section">
 
@@ -146,7 +140,7 @@
 
             <div class="center-button">
 
-                <a href="#" class="button secondary">
+                <a href="#portfolio" class="button secondary">
                     VER PORTFOLIO COMPLETO
                 </a>
 
@@ -155,9 +149,7 @@
         </section>
 
 
-        <!-- =========================
-             PRODUCCIÓN DE PRUEBA
-        ========================== -->
+        <!-- PRODUCCIÓN DE PRUEBA -->
 
         <section id="prueba" class="trial-section">
 
@@ -213,9 +205,7 @@
         </section>
 
 
-        <!-- =========================
-             PACKS
-        ========================== -->
+        <!-- PACKS -->
 
         <section id="packs" class="section">
 
@@ -271,22 +261,26 @@
 
 
                     <button
+                        type="button"
                         class="details-button"
                         onclick="toggleDetails(this)"
+                        aria-expanded="false"
+                        aria-controls="pack-details-1"
                     >
 
                         <span class="details-text">
                             VER QUÉ INCLUYE
                         </span>
 
-                        <span>
-                            +
-                        </span>
+                        <span>+</span>
 
                     </button>
 
 
-                    <div class="pack-details">
+                    <div
+                        class="pack-details"
+                        id="pack-details-1"
+                    >
 
                         <div>
 
@@ -360,22 +354,26 @@
 
 
                     <button
+                        type="button"
                         class="details-button"
                         onclick="toggleDetails(this)"
+                        aria-expanded="false"
+                        aria-controls="pack-details-2"
                     >
 
                         <span class="details-text">
                             VER QUÉ INCLUYE
                         </span>
 
-                        <span>
-                            +
-                        </span>
+                        <span>+</span>
 
                     </button>
 
 
-                    <div class="pack-details">
+                    <div
+                        class="pack-details"
+                        id="pack-details-2"
+                    >
 
                         <div>
 
@@ -445,22 +443,26 @@
 
 
                     <button
+                        type="button"
                         class="details-button"
                         onclick="toggleDetails(this)"
+                        aria-expanded="false"
+                        aria-controls="pack-details-3"
                     >
 
                         <span class="details-text">
                             VER QUÉ INCLUYE
                         </span>
 
-                        <span>
-                            +
-                        </span>
+                        <span>+</span>
 
                     </button>
 
 
-                    <div class="pack-details">
+                    <div
+                        class="pack-details"
+                        id="pack-details-3"
+                    >
 
                         <div>
 
@@ -504,9 +506,7 @@
         </section>
 
 
-        <!-- =========================
-             PERSONALIZADO
-        ========================== -->
+        <!-- PRODUCCIÓN PERSONALIZADA -->
 
         <section class="custom-section">
 
@@ -536,9 +536,7 @@
         </section>
 
 
-        <!-- =========================
-             LOGÍSTICA
-        ========================== -->
+        <!-- LOGÍSTICA -->
 
         <section class="section logistics-section">
 
@@ -636,9 +634,7 @@
         </section>
 
 
-        <!-- =========================
-             CTA FINAL
-        ========================== -->
+        <!-- CONTACTO -->
 
         <section id="contacto" class="final-cta">
 
@@ -655,7 +651,7 @@
                 la producción adecuada.
             </p>
 
-            <a href="#" class="button button-light large">
+            <a href="#contacto" class="button button-light large">
                 SOLICITAR PRESUPUESTO
             </a>
 
@@ -664,9 +660,7 @@
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 

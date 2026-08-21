@@ -449,10 +449,9 @@ button {
 
 .packs-grid {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 15px;
+    align-items: start;
 }
 
 .pack-card {

@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = "https://script.google.com/u/0/home/projects/1geMn8uf6nmkZgALNhU1d36vpHFHc5xnJePcQRHhD-MdsDbD9H7IpP8Vh/edit";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz9XMnPlCbh78RgeoUnwjeCdzMdLqhBhJjCZ_DUD3n3or46OFqLdwZlyjpVFIow7IQr/exec";
 
 const form = document.querySelector("#production-form");
 const statusBox = document.querySelector("#form-status");

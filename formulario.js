@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = "PEGAR_AQUI_LA_URL_DE_GOOGLE_APPS_SCRIPT";
+const APPS_SCRIPT_URL = "https://script.google.com/u/0/home/projects/1geMn8uf6nmkZgALNhU1d36vpHFHc5xnJePcQRHhD-MdsDbD9H7IpP8Vh/edit";
 
 const form = document.querySelector("#production-form");
 const statusBox = document.querySelector("#form-status");

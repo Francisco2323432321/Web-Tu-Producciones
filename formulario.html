@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TU producciones | Solicitud de producción</title>
+    <meta name="description" content="Formulario para solicitar fotografía, video y contenido para marcas.">
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="index.html">TU <span>producciones</span></a>
+        <span class="step-label">Solicitud de producción</span>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p class="eyebrow">CONTANOS SOBRE TU PROYECTO</p>
+            <h1>Preparemos una producción que tenga sentido para tu marca.</h1>
+            <p class="lead">Completá este formulario para que podamos evaluar productos, objetivos, formatos y logística antes de enviarte una propuesta.</p>
+            <div class="notice">Tiempo estimado: 6–10 minutos. Completarlo no confirma una reserva.</div>
+        </section>
+
+        <div id="form-status" class="status" hidden></div>
+
+        <form id="production-form" class="form-shell">
+            <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off">
+
+            <section class="form-section">
+                <div class="section-number">01</div>
+                <div class="section-title"><p class="eyebrow">CONTACTO</p><h2>¿Con quién hablamos?</h2></div>
+                <div class="fields two-cols">
+                    <label>Nombre y apellido *<input name="nombre" autocomplete="name" required></label>
+                    <label>Marca o negocio *<input name="marca" required></label>
+                    <label>Correo electrónico *<input type="email" name="email" autocomplete="email" required></label>
+                    <label>WhatsApp *<input type="tel" name="whatsapp" autocomplete="tel" required></label>
+                    <label>Ciudad / provincia *<input name="ubicacion" required></label>
+                    <label>Instagram o sitio web<input name="redes" placeholder="@marca o https://..."></label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <div class="section-number">02</div>
+                <div class="section-title"><p class="eyebrow">SERVICIO</p><h2>Elegí el punto de partida.</h2></div>
+                <div class="plan-grid">
+                    <label class="plan-option"><input type="radio" name="plan" value="Producción de prueba" required><span class="plan-check"></span><strong>Producción de prueba</strong><b>$50.000</b><small>1–2 productos · 2–3 fotografías aprox. por producto</small></label>
+                    <label class="plan-option"><input type="radio" name="plan" value="Fotografía"><span class="plan-check"></span><strong>Fotografía</strong><b>$300.000</b><small>Catálogo, web y contenido para redes</small></label>
+                    <label class="plan-option"><input type="radio" name="plan" value="Foto + Video" data-video><span class="plan-check"></span><strong>Foto + Video</strong><b>$500.000</b><small>Fotografía y videos verticales de producto</small></label>
+                    <label class="plan-option"><input type="radio" name="plan" value="Contenido" data-video data-location><span class="plan-check"></span><strong>Contenido</strong><b>Desde $800.000</b><small>2–3 jornadas, foto, video y trabajo con tu CM</small></label>
+                    <label class="plan-option"><input type="radio" name="plan" value="Producción personalizada" data-video data-location><span class="plan-check"></span><strong>Producción personalizada</strong><b>A cotizar</b><small>Campañas, catálogos o necesidades especiales</small></label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <div class="section-number">03</div>
+                <div class="section-title"><p class="eyebrow">PRODUCTOS</p><h2>¿Qué vamos a producir?</h2></div>
+                <div class="fields two-cols">
+                    <label>Tipo de producto *<input name="tipoProducto" placeholder="Ej.: indumentaria, cosmética, alimentos" required></label>
+                    <label>Cantidad de productos *<input type="number" name="cantidadProductos" min="1" required></label>
+                    <label>Variantes por producto<input name="variantes" placeholder="Colores, tamaños, sabores..."></label>
+                    <label>Dimensiones aproximadas<input name="dimensiones" placeholder="Tamaño y peso"></label>
+                    <label class="full">¿Requieren cuidados especiales?<textarea name="cuidados" rows="3" placeholder="Fragilidad, frío, vencimiento, armado, líquidos..."></textarea></label>
+                    <fieldset class="full checks"><legend>¿Cómo llegarán los productos? *</legend><label><input type="radio" name="entregaProductos" value="Los envía y retira el cliente" required> Los envío y retiro</label><label><input type="radio" name="entregaProductos" value="Necesita coordinar"> Necesito coordinar otra opción</label></fieldset>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <div class="section-number">04</div>
+                <div class="section-title"><p class="eyebrow">OBJETIVO Y ESTILO</p><h2>¿Qué debe comunicar el contenido?</h2></div>
+                <div class="fields two-cols">
+                    <label class="full">Objetivo principal *<textarea name="objetivo" rows="4" placeholder="Lanzamiento, catálogo, renovación de web, campaña, redes..." required></textarea></label>
+                    <label>Público objetivo<input name="publico" placeholder="¿A quién le habla la marca?"></label>
+                    <label>Fecha ideal de entrega<input type="date" name="fechaEntrega"></label>
+                    <fieldset class="full checks"><legend>¿Dónde se utilizará el material?</legend><label><input type="checkbox" name="canales" value="Instagram"> Instagram</label><label><input type="checkbox" name="canales" value="Web / tienda online"> Web / tienda online</label><label><input type="checkbox" name="canales" value="Publicidad paga"> Publicidad paga</label><label><input type="checkbox" name="canales" value="Catálogo"> Catálogo</label><label><input type="checkbox" name="canales" value="Otro"> Otro</label></fieldset>
+                    <label class="full">Estética buscada *<textarea name="estetica" rows="4" placeholder="Minimalista, colorida, natural, premium, fondos claros..." required></textarea></label>
+                    <label class="full">Referencias visuales<input name="referencias" placeholder="Links de Pinterest, Instagram, Drive o sitios de referencia"></label>
+                    <label class="full">Elementos obligatorios o cosas que debemos evitar<textarea name="obligatorios" rows="3"></textarea></label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <div class="section-number">05</div>
+                <div class="section-title"><p class="eyebrow">PRODUCCIÓN</p><h2>Definamos los entregables.</h2></div>
+                <div class="fields two-cols">
+                    <label>Fotografías estimadas<input type="number" name="cantidadFotos" min="1"></label>
+                    <label>Tipos de fotografía<select name="tipoFotos"><option value="">Seleccionar</option><option>Producto con fondo limpio</option><option>Editorial / ambientada</option><option>Uso o aplicación</option><option>Combinación</option></select></label>
+                    <div class="conditional-video full" hidden>
+                        <div class="fields two-cols">
+                            <label>Cantidad de videos estimada<input type="number" name="cantidadVideos" min="1"></label>
+                            <label>Duración aproximada<select name="duracionVideos"><option value="">Seleccionar</option><option>Hasta 15 segundos</option><option>15–30 segundos</option><option>30–60 segundos</option><option>A definir</option></select></label>
+                            <fieldset class="full checks"><legend>Recursos para los videos</legend><label><input type="checkbox" name="recursosVideo" value="Textos"> Textos en pantalla</label><label><input type="checkbox" name="recursosVideo" value="Música"> Música</label><label><input type="checkbox" name="recursosVideo" value="Voz en off"> Voz en off</label><label><input type="checkbox" name="recursosVideo" value="Ayuda con guion"> Necesito ayuda con el guion</label></fieldset>
+                        </div>
+                    </div>
+                    <fieldset class="full checks"><legend>¿Se necesitan personas en la producción?</legend><label><input type="radio" name="personas" value="No"> No</label><label><input type="radio" name="personas" value="Aporta el cliente"> Las aporta el cliente</label><label><input type="radio" name="personas" value="Cotizar modelos"> Necesito cotizar modelos / actores</label></fieldset>
+                </div>
+            </section>
+
+            <section class="form-section conditional-location" hidden>
+                <div class="section-number">06</div>
+                <div class="section-title"><p class="eyebrow">LOCACIÓN Y EQUIPO</p><h2>¿Dónde trabajaremos?</h2></div>
+                <div class="fields two-cols">
+                    <fieldset class="full checks"><legend>Lugar preferido</legend><label><input type="radio" name="lugar" value="Estudio TU"> Estudio de TU producciones</label><label><input type="radio" name="lugar" value="Espacio del cliente"> Local / espacio del cliente</label><label><input type="radio" name="lugar" value="Otra locación"> Otra locación</label></fieldset>
+                    <label class="full">Información del espacio<textarea name="espacio" rows="3" placeholder="Dirección, dimensiones, electricidad, acceso, horarios y restricciones"></textarea></label>
+                    <label>Nombre del CM o responsable<input name="contactoCM"></label>
+                    <label>Contacto del CM<input name="contactoCMMedio"></label>
+                </div>
+            </section>
+
+            <section class="form-section terms-section">
+                <div class="section-number">07</div>
+                <div class="section-title"><p class="eyebrow">CONFORMIDAD</p><h2>Términos iniciales.</h2></div>
+                <div class="terms-copy">
+                    <p>Esta solicitud permite preparar una propuesta; no constituye una reserva ni una contratación definitiva.</p>
+                    <ol><li>El alcance, precio final, fechas, forma de pago, revisiones y entrega se establecerán en el presupuesto aceptado.</li><li>El traslado y retiro de productos corresponde al cliente, salvo acuerdo escrito diferente.</li><li>Modelos, actores, locaciones, traslados y producciones especiales no se consideran incluidos salvo indicación expresa.</li><li>El cliente declara tener autorización para usar las marcas y materiales proporcionados.</li><li>Los derechos de uso y condiciones de publicación se detallarán en la propuesta definitiva.</li><li>Los datos enviados se utilizarán para evaluar la solicitud, elaborar el presupuesto y contactar al cliente.</li></ol>
+                </div>
+                <label class="accept"><input type="checkbox" name="aceptaTerminos" value="Sí" required><span>Leí y acepto los términos iniciales y autorizo el tratamiento de los datos para gestionar mi solicitud. *</span></label>
+                <label class="accept"><input type="checkbox" name="confirmaDatos" value="Sí" required><span>Confirmo que la información proporcionada es correcta. *</span></label>
+                <label class="signature">Nombre de quien presta conformidad *<input name="firmaNombre" required></label>
+            </section>
+
+            <div class="submit-area"><p>Revisaremos tu solicitud antes de confirmar disponibilidad y presupuesto.</p><button type="submit">ENVIAR SOLICITUD</button></div>
+        </form>
+    </main>
+
+    <footer><div class="brand">TU <span>producciones</span></div><p>Fotografía · Video · Contenido</p></footer>
+    <script src="formulario.js"></script>
+</body>
+</html>
